@@ -1,0 +1,50 @@
+.header {
+  background: #024f8a;
+  width: 100%;
+  box-shadow: 0 0.3rem 1rem 0 rgba(0, 0, 0, 0.3);
+}
+.header__content {
+  width: 111.4rem;
+  margin: 0 auto;
+  color: #fff;
+  height: 6.5rem;
+  padding-top: 1.3rem;
+}
+.logo__box {
+  float: left;
+  margin-top: 0.3rem;
+}
+.nav__box {
+  float: right;
+}
+.logo {
+  font-size: 2.5rem;
+}
+.finish__btn {
+  border: 0.2rem solid #fff;
+  font-size: 1.6rem !important;
+  border-radius: 0.3rem;
+  color: #024f8a;
+  cursor: pointer;
+  background: #fff;
+}
+.finish__btn:focus {
+  border: 0;
+  outline: 0;
+}
+.finish__btn i {
+  margin-right: 1rem;
+}
+.finish__btn:hover {
+  background-color: #024f8a;
+  color: #fff;
+  border: 0.2rem solid #fff;
+}
+
+/**===================RESPONSIVE CSS============================**/
+
+@media screen and (max-width: 75em) {
+  .header__content {
+    width: 95%;
+  }
+}

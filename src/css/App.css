@@ -1,0 +1,59 @@
+.btn {
+  padding: 1rem 1.5rem;
+  border: 0;
+  font-size: inherit;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+.btn:focus {
+  outline: 0;
+  border: 0;
+}
+.App {
+  position: relative;
+}
+.Start {
+  background: #024f8a;
+}
+.Start div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.Start {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+}
+.errMsg {
+  position: fixed;
+  animation: show-err 0.9s ease-in 0.3s;
+  top: 0.5rem;
+  opacity: 1;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  color: #fff;
+  z-index: 999999;
+  background: #de3030;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+@keyframes show-err {
+  0% {
+    top: -5rem;
+    opacity: 0;
+  }
+  100% {
+    top: 0.5rem;
+    opacity: 1;
+  }
+}
+.redirect {
+  color: #fff;
+}

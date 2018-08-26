@@ -1,0 +1,52 @@
+.Result {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 999999;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 10% 30%;
+  font-size: 1.6rem;
+}
+.page__title {
+  text-align: center;
+  color: #777777;
+  font-size: 3rem;
+}
+.subject__results {
+  width: 100%;
+  margin-top: 2rem;
+}
+.subject__result {
+  width: 49%;
+  float: left;
+  text-align: center;
+  background: #024f8a;
+  color: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.subject__result:nth-child(odd) {
+  margin-right: 2%;
+}
+.score {
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+.total__score {
+  background: #024f8a;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  font-size: 3rem;
+}
+.to-redirect a {
+  color: #024f8a;
+  text-decoration: none;
+}
+.to-redirect {
+  margin: 2rem;
+  text-align: center;
+}

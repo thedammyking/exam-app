@@ -1,0 +1,333 @@
+.exam__content {
+  width: 100%;
+  position: relative;
+}
+.Finish {
+  position: fixed;
+  width: 100vw;
+  height: 100%;
+  z-index: 9;
+  left: 0;
+  top: 10%;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.Finish div {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.Status {
+  width: 111.4rem;
+  margin: 2rem auto;
+}
+.card:not(:last-child) {
+  margin-right: 2%;
+}
+.card {
+  width: 32%;
+  float: left;
+  border-radius: 0.3rem;
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #024f8a;
+  color: #fff;
+  font-size: 2rem;
+  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.1);
+}
+.card--subject {
+  cursor: pointer;
+  position: relative;
+}
+.subject__name {
+  width: 90%;
+  float: left;
+  text-align: start;
+}
+.card--subject:hover .subject__options {
+  transform: translateY(0px);
+  opacity: 1;
+  z-index: 2;
+  visibility: visible;
+  transition-delay: 0s, 0s, 0.3s;
+}
+.card--complete span {
+  margin-right: 1rem;
+}
+.subject__options {
+  transform: translateY(-33%);
+  opacity: 0;
+  z-index: 1;
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+  text-align: start;
+  left: 0;
+  background-color: #fff;
+  color: #024f8a;
+  top: 99%;
+  border-bottom-left-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s,
+    z-index 0s linear 0.01s;
+  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.1);
+}
+.subject__option {
+  padding: 1rem 1.5rem;
+}
+.subject__option:hover {
+  background-color: #024f8a;
+  color: #fff;
+}
+.Nav {
+  width: 111.4rem;
+  margin: 2rem auto;
+  font-size: 1.6rem;
+}
+.all-question {
+  padding: 1rem 1.5rem;
+  background-color: #024f8a;
+  color: #fff;
+  border: 0;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  position: relative;
+  float: left;
+}
+.all-question span {
+  margin-left: 2rem;
+}
+.question__nav {
+  float: right;
+}
+.question__nav .btn {
+  background-color: #024f8a;
+  color: #fff;
+  border: 0.1rem solid #024f8a;
+}
+.question__nav .btn:hover,
+.question__nav .btn:focus {
+  background-color: #fff;
+  color: #024f8a;
+  border: 0.1rem solid #024f8a;
+}
+.btn__prev {
+  margin-right: 3rem;
+}
+.btn__prev span {
+  margin-right: 1rem;
+}
+.btn__next span {
+  margin-left: 1rem;
+}
+.question__options {
+  opacity: 0;
+  z-index: 1;
+  visibility: hidden;
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  width: 250%;
+  padding: 0.5rem;
+  left: 0;
+  top: 100%;
+  color: #024f8a;
+  background-color: #fff;
+  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.1);
+  cursor: initial;
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s,
+    z-index 0s linear 0.01s;
+}
+.all-question:hover .question__options {
+  opacity: 1;
+  z-index: 2;
+  visibility: visible;
+  transition-delay: 0s, 0s, 0.3s;
+}
+.question__option {
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  border: 0.1rem solid #024f8a;
+  cursor: pointer;
+  border-radius: 0.3rem;
+}
+.question__option:hover {
+  background-color: #024f8a;
+  color: #fff;
+}
+.Question {
+  width: 111.4rem;
+  margin: 2rem auto;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777777;
+  text-align: justify;
+  background: #f9f9ff;
+  padding: 1rem;
+}
+.question__answer {
+  width: 62%;
+  background: #fff;
+  padding: 1rem;
+  float: left;
+}
+.resources {
+  width: 36%;
+  margin-left: 2%;
+  background: #fff;
+  padding: 1rem;
+  float: right;
+}
+.__option,
+.__answer {
+  float: left;
+}
+.__option {
+  padding: 0.3rem 1rem;
+  background-color: #024f8a;
+  color: #fff;
+  border-radius: 0.3rem;
+  margin: 1.25rem 1.5%;
+  width: 5%;
+  text-align: center;
+}
+.__answer {
+  margin: 1.25rem 1.5%;
+  width: 89%;
+}
+.answer__option {
+  border: 0.2rem solid #fff;
+  cursor: pointer;
+}
+.answer__option:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.answer__option:hover {
+  border: 0.2rem solid #024f8a;
+}
+.answer__options {
+  margin-top: 1rem;
+}
+.resourse__title {
+  text-align: center;
+  margin: 1rem;
+  font-size: 2rem;
+}
+.turn-to-white {
+  background: #fff;
+  color: #024f8a;
+}
+.turn-to-red {
+  background: #ed1e24;
+  color: #fff;
+}
+.question__answer.no-resource {
+  width: 100%;
+}
+.question__answer.no-resource .question__text,
+.question__answer.no-resource .answer__options {
+  width: 65%;
+  margin: 0 auto;
+}
+.question__answer.no-resource .answer__options {
+  margin-top: 1rem;
+}
+.select--subject {
+  display: none;
+}
+.selected__option {
+  background-color: #024f8a;
+  color: #fff;
+}
+
+.selected__option .__option {
+  border: 0.2rem solid #fff;
+}
+.Question .question__nav {
+  display: none;
+}
+/**===================RESPONSIVE CSS============================**/
+
+@media screen and (min-width: 112.5em) {
+}
+
+@media screen and (max-width: 75em) {
+  .Status,
+  .Nav,
+  .Question {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 56.25em) {
+  .card {
+    width: 100%;
+  }
+  .card:not(:last-child) {
+    display: none;
+  }
+  .question__nav {
+    display: none;
+  }
+  .Question .question__nav {
+    display: block;
+    width: 100%;
+    padding: 2rem 2.5%;
+    background: #fff;
+    margin-top: 1rem;
+  }
+  .Question .question__nav .btn.btn__prev {
+    float: left;
+  }
+  .Question .question__nav .btn.btn__next {
+    float: right;
+  }
+  .select--subject {
+    display: block;
+    float: right;
+    background-color: #024f8a;
+    color: #fff;
+    width: 60%;
+    padding: 1rem 1.5rem;
+    border-radius: 0.3rem;
+    position: relative;
+  }
+  .subject__options {
+    transform: translateY(-10%);
+    display: none;
+  }
+  .select--subject:hover .subject__options {
+    transform: translateY(0%);
+    opacity: 1;
+    z-index: 1;
+    visibility: visible;
+    display: block;
+    transition-delay: 0s, 0s, 0.3s;
+  }
+  .Question {
+    width: 100%;
+  }
+  .resources,
+  .question__answer {
+    float: none;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+  }
+  .question__answer {
+    margin-bottom: 0;
+  }
+  .__option {
+    width: 8%;
+  }
+  .__answer {
+    width: 86%;
+  }
+  .Result {
+    padding: 25% 15%;
+  }
+}
+
+@media screen and (max-width: 37.5em) {
+}
