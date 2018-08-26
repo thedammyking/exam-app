@@ -6,7 +6,7 @@ import Loader from "react-loader-spinner";
 import axios from "axios";
 import _ from "lodash";
 import { Link } from "react-router-dom";
-import qs from "qs";
+//import qs from "qs";
 import Header from "../components/Exam/Header";
 import Status from "../components/Exam/Status";
 import Nav from "../components/Exam/Nav";
@@ -59,9 +59,10 @@ export default class Exam extends Component {
   };
 
   getUser = () => {
-    const parsed = qs.parse(window.location.search);
+    //const parsed = qs.parse(window.location.search);
+    const parsed = window.location.search.slice(1, 20).split("=")[1];
     return this.setState({
-      user: parsed.reg
+      user: parsed
     });
   };
 
