@@ -3,7 +3,7 @@ import "core-js/es6/set";
 import "raf/polyfill";
 import React, { Component } from "react";
 import "../css/Result.css";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 import { Context } from "../containers/Exam";
 
 export default class Result extends Component {
@@ -31,9 +31,9 @@ export default class Result extends Component {
                 Total: <span>{percent}%</span>
               </div>
               <p className="to-redirect">
-                <Link to="https://powerjamb.com.ng/dash1/index.php">
+                <a href="https://powerjamb.com.ng/dash1/index.php">
                   Back to Dashboard
-                </Link>
+                </a>
               </p>
             </div>
           );
