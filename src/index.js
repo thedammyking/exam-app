@@ -10,11 +10,11 @@ import registerServiceWorker from "./registerServiceWorker";
 
 const Router = props => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/powerj">
       <App />
     </BrowserRouter>
   );
 };
 
 ReactDOM.render(Router(), document.getElementById("root"));
-registerServiceWorker();
+//registerServiceWorker();

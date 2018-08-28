@@ -15,7 +15,7 @@ import Result from "../components/Result";
 import "../css/Exam.css";
 
 export const Context = React.createContext();
-const base__url = "http://35.184.129.252:80/api";
+const base__url = "https://35.184.129.252:80/api";
 
 export default class Exam extends Component {
   state = {
