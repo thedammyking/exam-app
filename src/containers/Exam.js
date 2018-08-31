@@ -5,8 +5,6 @@ import React, { Component } from "react";
 import Loader from "react-loader-spinner";
 import axios from "axios";
 import _ from "lodash";
-import { Link } from "react-router-dom";
-//import qs from "qs";
 import Header from "../components/Exam/Header";
 import Status from "../components/Exam/Status";
 import Nav from "../components/Exam/Nav";
@@ -15,7 +13,7 @@ import Result from "../components/Result";
 import "../css/Exam.css";
 
 export const Context = React.createContext();
-const base__url = "https://35.184.129.252:80/api";
+const base__url = "http://api.powerjamb.com.ng/api";
 
 export default class Exam extends Component {
   state = {
@@ -70,7 +68,7 @@ export default class Exam extends Component {
     let { answers } = this.state;
     this.setState({
       showFinish: true
-    })
+    });
     return axios({
       method: "post",
       url: `${base__url}/cbt/grade`,
@@ -93,7 +91,7 @@ export default class Exam extends Component {
             {
               result: { grade, percent },
               showResult: true,
-              showFinish:false,
+              showFinish: false
             },
             () =>
               axios({
@@ -322,9 +320,14 @@ export default class Exam extends Component {
           <div className="errMsg">
             <p>
               User does not exist or something went wrong, please
-              <Link class="redirect" to="">
-                {` register `}
-              </Link>
+              {` `}
+              <a
+                class="redirect"
+                href="https://powerjamb.com.ng/dash1/index.php"
+              >
+                register
+              </a>
+              {` `}
               or check your internet connection and reload the page.
             </p>
           </div>
@@ -333,9 +336,16 @@ export default class Exam extends Component {
         <Header />
 
         <main className="exam__content">
-          {showFinish && <div className="Finish">
-            <Loader type="TailSpin" color="#024f8a" height="100" width="100" />
-          </div>}
+          {showFinish && (
+            <div className="Finish">
+              <Loader
+                type="TailSpin"
+                color="#024f8a"
+                height="100"
+                width="100"
+              />
+            </div>
+          )}
           <Status />
           <Nav />
           <Question />
